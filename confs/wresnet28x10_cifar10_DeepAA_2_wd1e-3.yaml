@@ -1,0 +1,22 @@
+model:
+  type: wresnet28_10
+dataset: cifar10
+aug: DeepAA
+deepaa:
+  EXP: cifar_2
+cutout: -1
+batch: 128
+gpus: 1
+augmentation_search_space: Not_used # fixed_standard
+epoch: 200
+lr: 0.1
+lr_schedule:
+  type: 'cosine'
+  warmup:
+    multiplier: 1
+    epoch: 5
+optimizer:
+  type: sgd
+  nesterov: True
+  decay: 0.001
+

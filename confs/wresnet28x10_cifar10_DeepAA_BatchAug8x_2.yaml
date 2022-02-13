@@ -1,0 +1,23 @@
+all_workers_use_the_same_batches: true
+model:
+  type: wresnet28_10
+dataset: cifar10
+aug: DeepAA
+deepaa:
+  EXP: cifar_2
+cutout: -1
+batch: 128
+gpus: 8
+augmentation_search_space: Not_used
+epoch: 100
+lr: 0.2
+lr_schedule:
+  type: 'cosine'
+  warmup:
+    multiplier: 1
+    epoch: 5
+optimizer:
+  type: sgd
+  nesterov: True
+  decay: 0.0005
+

@@ -1,0 +1,8 @@
+.DS_Store
+model_checkpoints/**
+*.pyc
+__pycache__
+.idea/**
+results/**
+plots/**
+temp/results/
