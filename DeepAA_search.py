@@ -138,8 +138,8 @@ def pretrain():
     for epoch in range(args.nb_epochs):
         if epoch == args.nb_epochs+1:
             break
-        pbar = Progbar(target=nb_train_steps, interval=20, width=30)
-        print('\n')
+        pbar = Progbar(target=nb_train_steps, interval=0.05, width=30)
+        print('\n Pretrain Epoch {} \n'.format(epoch))
         for bno in range(nb_train_steps):
             images, labels = get_pretrain_data()
             loss, labels_pred = train_step(images, labels, clip_gradient_norm=5.)
