@@ -503,7 +503,3 @@ class Augmentation_DeepAA(object):
 
 
 IMAGENET_SIZE = (224, 224)
-
-
-
-

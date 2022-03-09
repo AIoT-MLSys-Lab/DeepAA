@@ -175,13 +175,6 @@ def train_and_eval(rank, worldsize, tag, dataroot, test_ratio=0.0, cv_fold=0, re
     other_parameters = [param for param in model.parameters() if id(param) not in [id(p) for p in bn_parameters]]
     assert len(list(model.parameters())) == len(bn_parameters) + len(other_parameters), 'Some parameters are missing'
     if C.get()['optimizer']['type'] == 'sgd':
-        # optimizer = optim.SGD(
-        #     model.parameters(),
-        #     lr=C.get()['lr'],
-        #     momentum=C.get()['optimizer'].get('momentum', 0.9),
-        #     weight_decay=C.get()['optimizer']['decay'],
-        #     nesterov=C.get()['optimizer']['nesterov']
-        # )
         optimizer = optim.SGD(
             [{'params': bn_parameters, 'weight_decay': 0},
              {'params': other_parameters}],
@@ -507,11 +500,3 @@ if __name__ == '__main__':
             result = pickle.load(f)
     else:
         spawn_process(None, -1, None, parsed_args, local_rank=args.local_rank)
-
-# mkdir ckpt
-# training
-# python -m DeepAA_evaluate.train -c confs/resnet50_imagenet_DeepAA_8x192.yaml --dataroot data --tag EXPERIMENT_NAME --save /localscratch/zhengyu/trivialaugment/ckpt/resnet50.pth
-
-# testing
-# python -m DeepAA_evaluate.train -c confs/resnet50_imagenet_DeepAA_test.yaml --dataroot data --tag EXPERIMENT_NAME --save /localscratch/zhengyu/trivialaugment/ckpt/resnet50_e220_top1_0.760_0.702.pth
-

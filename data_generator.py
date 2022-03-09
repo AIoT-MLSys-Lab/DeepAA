@@ -199,6 +199,3 @@ class DataAugmentation(object):
             aug_imgs = self.postprocessing_standardization(aug_imgs)
 
         return aug_imgs, labels
-
-
-
