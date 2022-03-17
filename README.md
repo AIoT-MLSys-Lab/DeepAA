@@ -6,7 +6,10 @@ This is the official implementation of Deep AutoAugment ([DeepAA](https://openre
   <img src="images/DeepAA.png" alt="DeepAA" width="70%"> <br />
 </p>
 
+## 5-Minute Explanation Video
+Click the figure to watch this short video explaining our work.
 
+[![slideslive_link](./images/DeepAA_slideslive.png)](https://recorder-v3.slideslive.com/#/share?share=64177&s=6d93977f-2a40-436d-a404-8808aee650fa)
 
 ## Requirements
 DeepAA is implemented using TensorFlow. 
