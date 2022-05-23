@@ -1,6 +1,6 @@
 # Deep AutoAugment
 
-This is the official implementation of Deep AutoAugment ([DeepAA](https://openreview.net/forum?id=St-53J9ZARf)), a fully automated data augmentation policy search method. Leaderboard is here: (https://paperswithcode.com/paper/deep-autoaugment-1)
+This is the official implementation of Deep AutoAugment ([DeepAA](https://openreview.net/forum?id=St-53J9ZARf)), a fully automated data augmentation policy search method. Leaderboard is here: https://paperswithcode.com/paper/deep-autoaugment-1
 
 <p align="center">
   <img src="images/DeepAA.png" alt="DeepAA" width="70%"> <br />
