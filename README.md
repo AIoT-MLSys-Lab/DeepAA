@@ -92,10 +92,12 @@ The distribution of discrete magnitudes of each augmentation transformation in e
 ## Citation
 If you find this useful for your work, please consider citing:
 ```
-@InProceedings{yu2022deepaa,
-  title = {Deep AutoAugment},
-  author = {Zheng, Yu and Zhang, Zhi and Yan, Shen and Zhang, Mi},
-  booktitle = {ICLR},
-  year = {2022}
+@inproceedings{
+zheng2022deep,
+title={Deep AutoAugment},
+author={Yu Zheng and Zhi Zhang and Shen Yan and Mi Zhang},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=St-53J9ZARf}
 }
 ```
